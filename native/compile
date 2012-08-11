@@ -1,0 +1,5 @@
+#!/bin/sh
+
+gcc -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux NativeCpuDevice.c -o NativeCpuDevice.o
+gcc -fPIC -g -c -lpthread ../generated.c -o generated.o
+gcc -shared -Wl,-soname,nativecpudev -o nativecpudev.so.1 NativeCpuDevice.o generated.o -lc

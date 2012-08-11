@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cd build/classes
+javah edu.syr.pcpratts.rootbeer.runtime.nativecpu.NativeCpuDevice
+mv edu_syr_pcpratts_rootbeer_runtime_nativecpu_NativeCpuDevice.h ../../native/
+javah edu.syr.pcpratts.rootbeer.runtime.memory.BatchIntReader
+mv edu_syr_pcpratts_rootbeer_runtime_memory_BatchIntReader.h ../../native/
+javah edu.syr.pcpratts.rootbeer.runtime2.cuda.CudaRuntime2
+mv edu_syr_pcpratts_rootbeer_runtime2_cuda_CudaRuntime2.h ../../native/
+javah edu.syr.pcpratts.rootbeer.runtime2.cuda.FastMemory
+mv edu_syr_pcpratts_rootbeer_runtime2_cuda_FastMemory.h ../../native/
+javah edu.syr.pcpratts.rootbeer.runtime2.cuda.Handles
+mv edu_syr_pcpratts_rootbeer_runtime2_cuda_Handles.h ../../native/
+javah edu.syr.pcpratts.rootbeer.runtime2.cuda.Cuda2DeviceMemory
+mv edu_syr_pcpratts_rootbeer_runtime2_cuda_Cuda2DeviceMemory.h ../../native/
+cd ../../

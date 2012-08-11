@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java -jar lib/pack.jar -mainjar dist/Rootbeer1.jar -directory dist/lib -destjar Rootbeer.jar

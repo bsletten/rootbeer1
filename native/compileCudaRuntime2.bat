@@ -1,0 +1,2 @@
+@call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+cl -c /I"C:\Program Files\Java\jdk1.6.0_26\include" /I"C:\Program Files\Java\jdk1.6.0_26\include\win32" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.0\include" CudaRuntime2.c

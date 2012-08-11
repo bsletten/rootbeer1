@@ -1,0 +1,4 @@
+
+rm *.so.1
+gcc -ggdb -Wall -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux NativeCpuDevice.c -o NativeCpuDevice.o
+gcc -ggdb -fPIC  -Wall -g -c -lpthread ../generated.c -o generated.o

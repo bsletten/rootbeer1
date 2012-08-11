@@ -1,0 +1,4 @@
+#!/bin/sh
+
+gcc -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux BatchIntReader.c -o BatchIntReader.o
+gcc -shared -Wl,-soname,batchint -o batchint.so.1 BatchIntReader.o -lc

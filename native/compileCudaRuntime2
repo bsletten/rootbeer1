@@ -1,0 +1,9 @@
+#!/bin/sh
+
+
+gcc -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux -I/usr/local/cuda/include/ CudaRuntime2.c -o CudaRuntime2.o
+gcc -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux -I/usr/local/cuda/include/ FastMemory.c -o FastMemory.o
+gcc -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux -I/usr/local/cuda/include/ Handles.c -o Handles.o
+gcc -fPIC -g -c -I/usr/lib/jvm/java-6-openjdk/include/ -I/usr/lib/jvm/java-6-openjdk/include/linux -I/usr/local/cuda/include/ Cuda2DeviceMemory.c -o Cuda2DeviceMemory.o
+gcc -shared -Wl,-soname,cudaruntime2 -o cudaruntime.so.1 CudaRuntime2.o FastMemory.o Handles.o Cuda2DeviceMemory.o -lc -lcuda
+cp cudaruntime.so.1 ../src/edu/syr/pcpratts/rootbeer/runtime2/native/
